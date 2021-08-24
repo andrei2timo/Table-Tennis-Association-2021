@@ -5,17 +5,16 @@
  */
 package tabletennis202021;
 
+import java.util.Comparator;
 /**
  *
  * @author andrei_timo
  */
-public class DoubleSet extends Set {
-
-    private String hPlayer;//home player
-    private String aPlayer;//away player
-    //Constructor for DoubleSet class
-    public DoubleSet()
+public class StatsComparator implements Comparator<TeamStats> 
+{
+    @Override
+    public int compare(TeamStats o1, TeamStats o2) 
     {
-        
-    }           
+        return o2.getMatchesWon() - o1.getMatchesWon();
+    }
 }
